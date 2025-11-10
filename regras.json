@@ -1,0 +1,127 @@
+[
+    {
+      "id": "REGRA_CRITICA_01",
+      "prioridade": 1,
+      "descricao": "Risco Crítico: Temperatura extrema e humidade muito baixa.",
+      "condicoes": [
+        { "variavel": "temp", "operador": ">", "valor": 40 },
+        { "variavel": "hum", "operador": "<", "valor": 20 }
+      ],
+      "resultado": {
+        "risco": "CRÍTICO",
+        "acao": "ALERTA MÁXIMO. Mobilização imediata de meios de combate e evacuação de zonas sensíveis."
+      }
+    },
+    {
+      "id": "REGRA_ALTA_01",
+      "prioridade": 2,
+      "descricao": "Risco Alto: Temperatura alta e vento muito forte.",
+      "condicoes": [
+        { "variavel": "temp", "operador": ">", "valor": 35 },
+        { "variavel": "wind", "operador": ">", "valor": 60 }
+      ],
+      "resultado": {
+        "risco": "ALTO",
+        "acao": "Pré-posicionamento de equipas de combate. Proibição total de queimas. Vigilância aérea."
+      }
+    },
+    {
+      "id": "REGRA_ALTA_02",
+      "prioridade": 2,
+      "descricao": "Risco Alto: Evento de 'raio seco' detetado.",
+      "condicoes": [
+        { "variavel": "event_type", "operador": "==", "valor": "raio_seco" }
+      ],
+      "resultado": {
+        "risco": "ALTO",
+        "acao": "Enviar equipas de vigilância terrestre para a zona do evento."
+      }
+    },
+    {
+      "id": "REGRA_ALTA_03",
+      "prioridade": 2,
+      "descricao": "Risco Alto: Temperatura muito alta e humidade baixa.",
+      "condicoes": [
+        { "variavel": "temp", "operador": ">", "valor": 38 },
+        { "variavel": "hum", "operador": "<", "valor": 30 }
+      ],
+      "resultado": {
+        "risco": "ALTO",
+        "acao": "Reforçar vigilância. Aviso à população."
+      }
+    },
+    {
+      "id": "REGRA_MEDIA_01",
+      "prioridade": 3,
+      "descricao": "Risco Médio: Evento de 'fogueira_descontrolada'.",
+      "condicoes": [
+        { "variavel": "event_type", "operador": "==", "valor": "fogueira_descontrolada" }
+      ],
+      "resultado": {
+        "risco": "MÉDIO",
+        "acao": "Enviar piquete de verificação."
+      }
+    },
+    {
+      "id": "REGRA_MEDIA_02",
+      "prioridade": 3,
+      "descricao": "Risco Médio: Temperatura alta e humidade moderada.",
+      "condicoes": [
+        { "variavel": "temp", "operador": ">", "valor": 35 },
+        { "variavel": "hum", "operador": "<", "valor": 40 }
+      ],
+      "resultado": {
+        "risco": "MÉDIO",
+        "acao": "Aumentar nível de prontidão das equipas de vigilância."
+      }
+    },
+    {
+      "id": "REGRA_MEDIA_03",
+      "prioridade": 3,
+      "descricao": "Risco Médio: Temperatura moderada e vento forte.",
+      "condicoes": [
+        { "variavel": "temp", "operador": ">", "valor": 30 },
+        { "variavel": "wind", "operador": ">", "valor": 45 }
+      ],
+      "resultado": {
+        "risco": "MÉDIO",
+        "acao": "Monitorizar pontos críticos de vento (ex: cumeadas)."
+      }
+    },
+    {
+      "id": "REGRA_BAIXA_01",
+      "prioridade": 4,
+      "descricao": "Risco Baixo: Humidade baixa.",
+      "condicoes": [
+        { "variavel": "hum", "operador": "<", "valor": 30 }
+      ],
+      "resultado": {
+        "risco": "BAIXO",
+        "acao": "Monitorização de rotina. Manter vigilância."
+      }
+    },
+    {
+      "id": "REGRA_BAIXA_02",
+      "prioridade": 4,
+      "descricao": "Risco Baixo: Temperatura elevada.",
+      "condicoes": [
+        { "variavel": "temp", "operador": ">", "valor": 32 }
+      ],
+      "resultado": {
+        "risco": "BAIXO",
+        "acao": "Monitorização de rotina. Manter vigilância."
+      }
+    },
+    {
+      "id": "REGRA_BAIXA_03",
+      "prioridade": 4,
+      "descricao": "Risco Baixo: Vento moderado.",
+      "condicoes": [
+        { "variavel": "wind", "operador": ">", "valor": 40 }
+      ],
+      "resultado": {
+        "risco": "BAIXO",
+        "acao": "Monitorização de rotina. Manter vigilância."
+      }
+    }
+  ]
